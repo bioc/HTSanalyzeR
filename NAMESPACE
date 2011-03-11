@@ -1,38 +1,55 @@
-import("GSEABase","cellHTS2","BioNet","biomaRt")
-import("AnnotationDbi")
+importClassesFrom("graph", "graphNEL")
+import("igraph", "GSEABase", "cellHTS2", "BioNet", "biomaRt", "AnnotationDbi")
 
-export("aggregatePvals",
-	"biogridDataDownload", 
+exportClasses(
+	"GSCA",
+	"NWA"
+)
+export(
+	   "aggregatePvals",
+	   "annotationConvertor",
+	   "biogridDataDownload", 
        "celAnnotationConvertor",
        "cellHTS2OutputStatTests",
        "collectionGsea",
        "drosoAnnotationConvertor",
        "duplicateRemover",
-       "enrichedSubNw",
        "FDRcollectionGsea",
        "analyzeGeneSetCollections",
-       "getGeneSetInfo",
        "GOGeneSets",
-       "GOstatsHTest",
        "gseaPlots",
        "gseaScores",
-	"HTSanalysis4CellHTS2",
-	"HTSanalyzeR",
-	"InterProGeneSets",
+       "gseaScoresBatch",
+       "gseaScoresBatchParallel",
+       "HTSanalyzeR4cellHTS2",
        "KeggGeneSets",
        "mammalAnnotationConvertor",
        "multiHyperGeoTest",
        "networkAnalysis",
-       "overlapComputing",
-	"pairwiseGsea",
-	"pairwiseGseaPlot",
-	"pairwisePhenoMannWith",
+       "networkPlot",
+	   "pairwiseGsea",
+	   "pairwiseGseaPlot",
+	   "pairwisePhenoMannWhit",
        "permutationPvalueCollectionGsea",
-       "permutationPvalueGsea",
-       "permutationScoresGsea",
-       "permutationsGeneratorGsea",
        "hyperGeoTest",
        "writeReportHTSA")
 
-
+exportMethods(
+	"analyze",
+	"reportAll",
+	"plotSubNet",
+	"viewSubNet",
+	"viewEnrichMap",
+	"plotEnrichMap",
+	"plotGSEA",
+	"viewGSEA",
+    "writeHits",	
+    "getTopGeneSets",	
+    "appendGSTerms",
+	"interactome",
+	"preprocess",
+	"show",
+	"summarize",
+	"report"
+)
 
