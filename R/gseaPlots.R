@@ -26,11 +26,13 @@ gseaPlots <- function(runningScore, enrichmentScore, positions, geneList) {
 	##if(output == "png" ) 
 	##	png(file.path(filepath, paste("gsea_plots", filename, ".png", sep="")))
 	##set the graphical parameters	
-	par(pin=c(5, 1.5), mfrow=c(2, 1), lwd=1, mai=c(0.2, 1, 1, 1))
+#	par(pin=c(5, 1.5), mfrow=c(2, 1), lwd=1, mai=c(0.2, 1, 1, 1))
+	layout(matrix(c(1,2), nrow=2), heights=c(3,7))
 	##Plot the phenotypes along the geneList, and add a vertical line 
 	##for each match between geneList and gene set
 	##this is done using the 'positions' output of gseaScores, 
 	##which stores a one for each match position and a zero otherwise	
+	par(mai=c(0.2, 1, 0.2, 0.2))
 	plot(x=seq(1, length(geneList)), type="l", y=geneList, 
 		ylab="Phenotypes", xlab=NA, col="magenta", lwd=2, xaxt="n")
 	abline(v=which(positions == 1))
@@ -39,7 +41,7 @@ gseaPlots <- function(runningScore, enrichmentScore, positions, geneList) {
 			ylab="Phenotypes", xlab=NA, col="magenta", lwd=2, xaxt="n")
 	##Plot the running score and add a vertical line at the position of 
 	##the enrichment score (maximal absolute value of the running score)	
-	par(mai=c(1, 1, 0.1, 1))
+	par(mai=c(1, 1, 0.1, 0.2))
 	plot(x=c(1:length(runningScore)), y=runningScore,type="l", 
 		xlab="Position in the ranked list of genes", ylab="Running enrichment score")
 	abline(h=0)
