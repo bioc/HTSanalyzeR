@@ -1,5 +1,5 @@
 importClassesFrom("graph", "graphNEL")
-import("igraph", "GSEABase", "cellHTS2", "BioNet", "biomaRt", "AnnotationDbi")
+import("igraph0", "GSEABase", "cellHTS2", "BioNet", "biomaRt", "AnnotationDbi")
 
 exportClasses(
 	"GSCA",
