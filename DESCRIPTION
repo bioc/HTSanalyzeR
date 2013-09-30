@@ -1,10 +1,10 @@
 Package: HTSanalyzeR
 Type: Package
 Title: Gene set over-representation, enrichment and network analyses for high-throughput screens
-Version: 2.12.0
-Date: 2012-08-22
-Author: Xin Wang <Xin.Wang@cancer.org.uk>, Camille Terfve <cdat2@cam.ac.uk>, John C. Rose <jcr53@cam.ac.uk>, Florian Markowetz <Florian.Markowetz@cancer.org.uk>
-Maintainer: Xin Wang <Xin.Wang@cancer.org.uk>
+Version: 2.12.1
+Date: 2013-09-29
+Author: Xin Wang <xinwang2hms@gmail.com>, Camille Terfve <cdat2@cam.ac.uk>, John C. Rose <jcr53@cam.ac.uk>, Florian Markowetz <Florian.Markowetz@cruk.cam.ac.uk>
+Maintainer: Xin Wang <xinwang2hms@gmail.com>
 Depends: R (>= 2.15), igraph0, methods
 Imports: graph, igraph0, GSEABase, BioNet, cellHTS2, AnnotationDbi, biomaRt, RankProd
 Suggests: KEGG.db, GO.db, org.Dm.eg.db, GOstats, org.Ce.eg.db, org.Mm.eg.db, org.Rn.eg.db, org.Hs.eg.db, snow

@@ -1,3 +1,6 @@
+version 2.12.1
+- Bug corrected for GSEA. The bug was that the size of gene set was computed 
+  before filtering out genes that are not in the universe.
 version 2.9.5
 - Corrected a bug in function hyperGeoTest to avoid significant p-values for 
 zero observed hit.
